@@ -1,6 +1,6 @@
 
-// Assign a name to the digital pin 2, pin 2 is the on board LED
-unsigned int led_pin = 2;
+// Fill in the correct GPIO pin for your LED
+unsigned int led_pin = /*TODO*/;
  
 // Declare an array named letters that holds addresses of string literals 
 // (i.e. an array of pointers to strings composed of dots and dashes) 
