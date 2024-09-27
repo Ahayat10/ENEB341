@@ -56,9 +56,6 @@ void setup() {
 
 // Callback function that will be executed when data is received
 void OnDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len) {
-  memcpy(&myData, incomingData, sizeof(myData));
-
-  Serial.println(myData.a);
 
   /* 
   TODO: Insert code to copy incoming data
