@@ -23,9 +23,6 @@ void setup() {
     while (true);
   }
   
-  // Set the sync word
-  // LoRa.setSyncWord(0x12);  // Private network sync word
-  
   Serial.println("LoRa initialization successful.");
 }
 
