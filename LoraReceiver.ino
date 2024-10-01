@@ -18,7 +18,7 @@ void setup() {
   LoRa.setPins(SS, RST);  // Set LoRa pins without DIO0
   
   // Check if LoRa module initializes successfully
-  if (!LoRa.begin(901E6)) {  // 915 MHz frequency (adjust for your region, 433E6 or 868E6)
+  if (!/*TODO: Begin and set frequency*/) { 
     Serial.println("LoRa initialization failed. Check your connections.");
     while (true);
   }
@@ -31,7 +31,7 @@ void setup() {
 
 void loop() {
   // Try to parse the packet
-  int packetSize = LoRa.parsePacket();
+  int packetSize = /*TODO: Parse the packet*/;
   
   // If a packet is received
   if (packetSize) {
@@ -39,13 +39,13 @@ void loop() {
     Serial.print("Received packet: ");
     
     // Read and print the packet
-    while (LoRa.available()) {
-      String incoming = LoRa.readString();
+    while (/*TODO: Make sure bytes are available for reading*/) {
+      String incoming = /*TODO: Read the string. this is not in the api, use LoRa.readString()*/;
       Serial.print(incoming);
     }
     
     // Print RSSI (Received Signal Strength Indicator)
     Serial.print(" with RSSI: ");
-    Serial.println(LoRa.packetRssi());
+    Serial.println(/*TODO: Find the RSSI of the packet*/);
   }
 }
