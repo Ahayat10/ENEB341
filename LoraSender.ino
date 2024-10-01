@@ -18,7 +18,7 @@ void setup() {
   LoRa.setPins(SS, RST);  // Set LoRa pins without DIO0
   
   // Check if LoRa module initializes successfully
-  if (!(/*TODO: Begin and set frequency*/E6)) {  
+  if (!/*TODO: Begin and set frequency*/) {  
     Serial.println("LoRa initialization failed. Check your connections.");
     while (true);
   }
