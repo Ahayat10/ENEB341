@@ -18,7 +18,7 @@ void setup() {
   LoRa.setPins(SS, RST);  // Set LoRa pins without DIO0
   
   // Check if LoRa module initializes successfully
-  if (!LoRa.begin(/*TODO: SET YOUR FREQUENCY, ex:915E6*/E6)) {  
+  if (!(/*TODO: Begin and set frequency*/E6)) {  
     Serial.println("LoRa initialization failed. Check your connections.");
     while (true);
   }
@@ -35,7 +35,7 @@ void loop() {
   
   
   /*TODO begin packet*/
-  /*TODO print the message*/
+  /*TODO print the message. this command is not on the API, use lora.print()*/
   /*TODO end packet*/
 
   // Wait 5 seconds before sending the next packet
