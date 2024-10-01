@@ -35,7 +35,7 @@ void loop() {
   
   
   /*TODO begin packet*/
-  /*TODO print the message. this command is not on the API, use lora.print()*/
+  /*TODO print the message. this command is not on the API, use LoRa.print()*/
   /*TODO end packet*/
 
   // Wait 5 seconds before sending the next packet
