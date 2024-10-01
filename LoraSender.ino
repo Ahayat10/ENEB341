@@ -18,7 +18,7 @@ void setup() {
   LoRa.setPins(SS, RST);  // Set LoRa pins without DIO0
   
   // Check if LoRa module initializes successfully
-  if (!LoRa.begin(901E6)) {  // 915 MHz frequency (adjust to 433E6 or 868E6 depending on your module and region)
+  if (!LoRa.begin(/*TODO: SET YOUR FREQUENCY, ex:915E6*/E6)) {  
     Serial.println("LoRa initialization failed. Check your connections.");
     while (true);
   }
@@ -32,9 +32,11 @@ void setup() {
 void loop() {
   // Send a packet
   Serial.println("Sending packet: Hello, LoRa with Sync Word");
-  LoRa.beginPacket();
-  LoRa.print("Hello, LoRa with Sync Word");
-  LoRa.endPacket();
+  
+  
+  /*TODO begin packet*/
+  /*TODO print the message*/
+  /*TODO end packet*/
 
   // Wait 5 seconds before sending the next packet
   delay(5000);
