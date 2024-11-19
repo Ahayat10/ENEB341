@@ -5,12 +5,12 @@
 #include <unistd.h> // For sleep()
 #include <signal.h>
 
-#define ADDRESS     "ssl://cbe77b9c7f3c47ad9fe9dd706eba633d.s1.eu.hivemq.cloud:8883" // Broker address
+#define ADDRESS     "ssl://YOURURL:8883" // Broker address
 #define CLIENTID    "paho-mqtt-subscriber" // Unique client ID
 #define TOPIC       "test/topic"          // Subscription topic
 #define QOS         1                     // Quality of Service
-#define USERNAME    "testConnection"      // MQTT username
-#define PASSWORD    "mqttConn123!"        // MQTT password
+#define USERNAME    "YOURUSERNAME"      // MQTT username
+#define PASSWORD    "YOURPASSWORD"        // MQTT password
 
 volatile int running = 1; // Flag to handle graceful shutdown
 
