@@ -61,14 +61,13 @@ int main() {
         int i;
         for(i = 0; i < 100; i++) {
             // Read sensor data
-            float temperature = bmp180_temperature(bmp);
-            long pressure = bmp180_pressure(bmp);
-            float altitude = bmp180_altitude(bmp);
+            float temperature = /*TODO: READ TEMPERATURE*/;
+            long pressure = /*TODO: READ PRESSURE*/;
+            float altitude = /*TODO: READ ALTITUDE*/;
 
             // Create a formatted string message with sensor readings
             char message[256];  // Buffer to hold the message
-            snprintf(message, sizeof(message), "Temperature: %.2f°C, Pressure: %ld Pa, Altitude: %.2f m", 
-                    temperature, pressure, altitude);
+            snprintf(/*TODO: CREATE THE FORMATTED STRING WITH THE SENSOR READINGS*/);
             
             // Prepare the message for publishing
             pub_msg.payload = message;
@@ -77,14 +76,11 @@ int main() {
             pub_msg.retained = 0;
 
             // Publish the message to the topic
-            printf("Publishing sensor data: %s\n", message);
-            rc = MQTTClient_publishMessage(client, TOPIC, &pub_msg, &token);
-            if (rc != MQTTCLIENT_SUCCESS) {
-                printf("Failed to publish message, return code %d\n", rc);
-                MQTTClient_disconnect(client, 1000);
-                MQTTClient_destroy(&client);
-                return -1;
-            }
+            /*
+	    
+     		PUBLISH THE MESSAGE. HINT: LOOK BACK AT publish.c FOR THIS CODE
+     
+     	    */
 
             // Wait for message delivery confirmation
             rc = MQTTClient_waitForCompletion(client, token, TIMEOUT);
