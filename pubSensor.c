@@ -5,13 +5,13 @@
 #include "bmp180.h"
 #include <unistd.h>
 
-#define ADDRESS     "ssl://cbe77b9c7f3c47ad9fe9dd706eba633d.s1.eu.hivemq.cloud:8883"  // SSL port
+#define ADDRESS     "ssl://YOURURL:8883"  // SSL port
 #define CLIENTID    "paho-mqtt-publisher"
 #define TOPIC       "test/topic"
 #define QOS         1
 #define TIMEOUT     10000L  // 10 seconds timeout for waiting for delivery
-#define USERNAME    "testConnection"
-#define PASSWORD    "mqttConn123!"
+#define USERNAME    "YOURUSERNAME"
+#define PASSWORD    "YOURPASSWORD"
 
 
 
