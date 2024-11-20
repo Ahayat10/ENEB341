@@ -77,8 +77,8 @@ int main() {
 
             // Publish the message to the topic
             /*
-	    
-     		PUBLISH THE MESSAGE. HINT: LOOK BACK AT publish.c FOR THIS CODE
+	    	TODO: PUBLISH THE MESSAGE. 
+       		HINT: LOOK BACK AT publish.c FOR THIS CODE
      
      	    */
 
